@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+ <html lang="en">
+
+ //= template/head
+ <body class="page__contacts">
+ <div class="wrapper">
+ 
+ //= template/header.html
+
+ <main>
+    <section class="contacts">
+        <div class="contacts__body">
+            <h1 class="contacts__title" id="title">Contact us</h1>
+
+            <p class="contacts__text">
+                Tradesmarter is a special company with a unique story, fascinating characters and a compelling plot.
+            </p>
+            <p class="contacts__desc">
+                Contact us to request a full demo or any other information. 
+            </p>
+
+            <form class="form" action="" method="">
+                <label for="userName">
+                    <input name="name" id="userName" type="text" placeholder="Name">
+                </label>
+                <label for="userEmail">
+                    <input name="email" id="userEmail" type="email" placeholder="Email">
+                </label>
+                <textarea name="Message" id="userMessage" cols="10" rows="3" placeholder="Message"></textarea>
+                <button class="btn btn-blue form__btn--submit" id="btnSubmit" type="button">Request a demo</button>
+            </form>
+
+            <div class="request request--off">
+                <div class="request__wrap">
+                    <div class="request__body">
+                        <h3 class="request__title">We received your request</h3>
+                        <p class="request__text">
+                            During the working day we will contact you and discuss the details. And now you can drop by for coffee or tea!
+                        </p>
+                    </div>
+                </div>
+                <button class="btn btn-blue form__btn--submit" id="btnBack" type="button">Back to Main</button>
+            </div>
+
+            <p class="contacts__info">
+                Phone +972-72-2111611    Email: info@brokerage.com
+                Skype with us Holdings Singapore Branch Ltd
+                1 Raffles Quay Singapore 048583
+            </p>
+         </div>
+    </section>
+</main>
+
+//= template/footer.html
+
+</div>
+<script src="assets/js/script.js"></script>
+
+</body>
+</html>

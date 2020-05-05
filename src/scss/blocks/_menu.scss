@@ -1,0 +1,160 @@
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  font-family: 'Montserrat';
+
+  &__list {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+
+    li:not(:last-of-type) {
+      &.current-menu-item a {
+        &::after {
+          position: absolute;
+          content: '';
+          display: block;
+          bottom: -5px;
+          width: 120%;
+          left: -10%;
+          height: 1px;
+          background-color: $color-blue;
+        } 
+      }
+    }
+  }
+
+  &-item {
+    position: relative;
+
+    display: inline-block;
+    margin-right: 60px;
+
+    @include transition;
+
+    &:last-child {
+      margin-right: 0 !important;
+
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Montserrat,sans-serif;
+        text-decoration: none;
+        border: none;
+        border-radius: 100px;
+        cursor: pointer;
+
+        padding: 10px 16px;
+        color: #000;
+        background-color: #fff;
+
+        &:focus,
+        &:hover {
+          color: #fff;
+          background-color: $color-blue;
+        }
+      }
+    }
+  }
+
+  &__btn {
+    display: none;
+  }
+
+  a {
+      color: white;
+      font-size: 1.125rem;
+      line-height: 1.375rem;
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        color: #0047FF;
+
+        @include transition;
+      }
+    }
+
+  &__info {
+    display: none;
+  }
+}
+
+@media (max-width: 1100px) {
+  .header {
+    .menu {
+      &-item {
+        margin-right: 20px;
+
+        a {
+          font-size: 1rem;
+          line-height: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    .menu {
+      display: none;
+      padding: 0;
+  
+      &--open {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0 15px;
+        padding: 0;
+        padding-bottom: 20px;
+      }
+  
+      &__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+  
+        text-align: center;
+      }
+  
+      &-item {
+        margin-right: 0;
+        margin-bottom: 40px;
+  
+        &:nth-last-of-type(2) {
+          margin-bottom: 34px;
+        }
+  
+        &:last-of-type a{
+          font-size: 0.875rem;
+          line-height: 1.25rem;
+        }
+      }
+  
+      a {
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+      }
+  
+      &__info {
+        &--open {
+          display: block;
+        }
+  
+        font-size: 0.75rem;
+        line-height: 1.125rem;
+        text-align: center;
+  
+        p:not(:last-of-type) {
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+}

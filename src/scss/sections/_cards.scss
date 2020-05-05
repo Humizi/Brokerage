@@ -1,0 +1,25 @@
+.cards {
+  display: flex;
+  margin: 0 100px;
+  margin-top: 250px;
+  padding-bottom: 250px;
+
+  @include transition-long;
+}
+
+@media (max-width: 1400px) {
+  .cards {
+    flex-direction: column;
+    margin: 0 100px;
+    padding: 250px 0;
+
+    @include transition-long;
+  }
+}
+
+@media (max-width: 768px) {
+  .cards {
+    margin: 0;
+    padding: 90px 0;
+  }
+}

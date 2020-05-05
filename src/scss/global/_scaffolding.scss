@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: black;
+  font-family: 'Gotham Pro', sans-serif;
+  color: #FFF;
+
+  @media (max-width: 1560px) {
+    background: url('../assets/img/bg.png') 350px 0 no-repeat,
+    url('../assets/img/bg-2.png') 0px 1400px no-repeat;
+    background-color: black;
+  }
+
+  @media (max-width: 767.9px) {
+    background: url('../assets/img/bg.png') top right no-repeat,
+    url('../assets/img/bg-2.png') 0px 1400px no-repeat;
+    background-size: contain;
+    background-color: black;
+  }
+}
+
+h1 {
+  font-size: 3.625rem;
+  line-height: 5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+
+  @media (max-width: 767.9px) {
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+  }
+}
+
+h2,
+h3 {
+  font-weight: 500;
+}
+
+h4 {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+}
+
+p {
+  font-family: 'Montserrat';
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.g-pro {
+  font-family: 'Gontam Pro', 'sans-serif';
+}

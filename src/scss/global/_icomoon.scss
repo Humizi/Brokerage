@@ -1,0 +1,136 @@
+ @font-face {
+  font-family: 'icomoon';
+  src: url('../assets/fonts/icomoon.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+} 
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-award:before {
+    content: "\e900";
+    color: #fff;
+  }
+  .icon-close:before {
+    content: "\e901";
+    color: #fff;
+  }
+  .icon-crown:before {
+    content: "\e902";
+    color: #fff;
+  }
+  .icon-danger:before {
+    content: "\e903";
+    color: #fff;
+  }
+  .icon-facebook:before {
+    content: "\e904";
+    color: #fff;
+  }
+  .icon-flag:before {
+    content: "\e905";
+    color: #fff;
+  }
+  .icon-gear:before {
+    content: "\e906";
+    color: #fff;
+  }
+  .icon-google:before {
+    content: "\e907";
+    color: #fff;
+  }
+  .icon-group:before {
+    content: "\e908";
+    color: #fff;
+  }
+  .icon-headhunting:before {
+    content: "\e909";
+    color: #fff;
+  }
+  .icon-icon:before {
+    content: "\e90a";
+    color: #fff;
+  }
+  .icon-lifeguard:before {
+    content: "\e90b";
+    color: #fff;
+  }
+  .icon-linkedin:before {
+    content: "\e90c";
+    color: #fff;
+  }
+  .icon-logo:before {
+    content: "\e90d";
+    color: #fff;
+  }
+  .icon-menu:before {
+    content: "\e90e";
+    color: #fff;
+  }
+  .icon-olive-branch-left:before {
+    content: "\e90f";
+    color: #fff;
+  }
+  .icon-olive-branch-right:before {
+    content: "\e910";
+    color: #fff;
+  }
+  .icon-oval:before {
+    content: "\e911";
+    color: #fff;
+  }
+  .icon-rocket:before {
+    content: "\e912";
+    color: #fff;
+  }
+  .icon-send:before {
+    content: "\e913";
+    color: #fff;
+  }
+  .icon-skype:before {
+    content: "\e914";
+    color: #fff;
+  }
+  .icon-speed:before {
+    content: "\e915";
+    color: #fff;
+  }
+  .icon-support:before {
+    content: "\e916";
+    color: #fff;
+  }
+  .icon-target:before {
+    content: "\e917";
+    color: #fff;
+  }
+  .icon-thing:before {
+    content: "\e918";
+    color: #fff;
+  }
+  .icon-tools:before {
+    content: "\e919";
+    color: #fff;
+  }
+  .icon-web-programming:before {
+    content: "\e91a";
+    color: #fff;
+  }
+  .icon-youtube:before {
+    content: "\e91b";
+    color: #fff;
+  }
+  

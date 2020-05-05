@@ -1,0 +1,234 @@
+.card-black {
+  position: relative;
+
+  box-sizing: border-box;
+  max-width: 740px;
+  margin-top: 305px;
+  margin-left: -80px;
+  padding: 80px;
+
+  background-color: #000;
+  border-radius: 40px;
+
+  &__title {
+    margin-bottom: 20px;
+
+    font-size: 2rem;
+    line-height: 3.125rem;
+  }
+
+  &__text {
+    line-height: 180%;
+
+    color: #fff;
+    opacity: 0.8;
+
+    &:not(:last-of-type) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__border {
+    z-index: 3;
+    position: absolute;
+    top: -17px;
+
+    width: calc(100% + 40px);
+    height: calc(100% + 20px);
+    margin-left: -100px;
+
+    border: 1px solid #fff;
+    border-radius: 40px;
+    mix-blend-mode: exclusion;
+  }
+
+  &::before {
+    content: '';
+
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+
+    width: 80px;
+    height: 80px;
+
+    background-image: url('../assets/img/circle.svg');
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 80px 80px;
+  }
+
+  &__btn {
+    position: absolute;
+    top: -70px;
+    right: 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 125px;
+
+    cursor: pointer;
+
+    &-text {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1rem;
+      line-height: 180%;
+      color: #fff;
+
+      background-color: transparent;
+      border: none;
+
+      cursor: pointer;
+    }
+
+    &-arrow path{
+      fill: #fff;
+    }
+
+    &:focus .card-black__btn-text,
+    &:focus .card-black__btn-arrow path,
+    &:hover .card-black__btn-text,
+    &:hover .card-black__btn-arrow path {
+      color: $color-blue;
+      fill: $color-blue;
+
+      @include transition;
+    }
+  }
+}
+
+.support {
+  .card-black {
+    max-width: 830px;
+    margin-top: 0;
+    margin-left: 0;
+    padding: 100px;
+
+    border: none;
+    mix-blend-mode: normal;
+  }
+}
+
+@media (max-width: 1400px) {
+  .cards {
+    .card-black {
+      position: relative;
+
+      max-width: 100%;
+      margin: 0 90px;
+      padding: 150px 0 100px 0;
+
+      background-color: transparent;
+      border-bottom: 1px solid rgba($color: #fff, $alpha: 0.1);
+      border-radius: 0;
+
+      &::before {
+        display: none;
+      }
+
+      &__border {
+        display: none;
+      }
+
+      &__text {
+        &:last-of-type {
+          display: none;
+        }
+
+        &:not(:last-of-type) {
+          margin: 0;
+        }
+      }
+
+      &__btn {
+        top: 100px;
+        left: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .cards {
+    .card-black {
+      margin: 0 15px;
+      padding: 60px 0;
+      padding-top: 100px;
+
+      transition: 1s;
+
+      &::before {
+        content: '';
+
+        position: absolute;
+        top: 30px;
+        right: 0;
+
+        width: 40px;
+        height: 40px;
+
+        background-image: url('../assets/img/circle.svg');
+        background-position: 0 0;
+        background-size: 40px 40px;
+        background-repeat: no-repeat;
+      }
+
+      &__btn {
+        top: 40px;
+        left: 0;
+
+        width: 100px;
+
+        &-text {
+          font-size: 0.75rem;
+          line-height: 1.125rem;
+        }
+      }
+    }
+  }
+
+  .support {
+    .card-black {
+      transition: 1s;
+
+      &::before {
+        bottom: 15px;
+        right: 15px;
+
+        width: 40px;
+        height: 40px;
+
+        background-size: 40px 40px;
+      }
+    }
+  }
+
+  .card-black {
+    padding: 30px 15px 60px 15px;
+    margin-bottom: 40px;
+
+    &__title {
+      margin-bottom: 15px;
+
+      font-size: 1.125rem;
+      line-height: 1.5rem;
+    }
+
+    &__text {
+      font-size: 0.75rem;
+      line-height: 1.125rem;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .support {
+    .card-black {
+      &::before {
+        top: 15px;
+        right: 15px;
+      }
+    }
+  }
+}

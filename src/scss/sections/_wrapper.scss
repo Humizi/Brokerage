@@ -1,0 +1,12 @@
+.wrapper {
+    width: 100%;
+
+    transition: 1s;
+
+    &--on {
+        width: 70%;
+
+        transition-delay: 0.2s;
+ 
+    }
+}

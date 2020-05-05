@@ -1,0 +1,17 @@
+.main-info {
+    background: linear-gradient(180deg, rgba(0, 71, 255, 0) 0%, #0047FF 100%);
+}
+
+.page__solution {
+    .main-info {
+        background: linear-gradient(180deg, rgba(0, 71, 255, 0) 0%, #0047FF 50%, #0047FF 50%, #000 100%); 
+    }
+}
+
+@media (max-width: 768px) {
+    .page__solution {
+        .main-info {
+            background: linear-gradient(180deg, rgba(0, 71, 255, 0) 0%, #0047FF 100%);
+        }
+    }
+}

@@ -1,0 +1,35 @@
+.social {
+    display: flex;
+    align-items: center;
+    
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        width: 270px;
+
+        list-style: none;
+    }
+
+    &__link:hover path,
+    &__link:focus path {
+        fill: #0047FF;
+
+        @include transition;
+    }
+
+    @media (max-width: 1158px){
+        margin-top: 30px;
+    }
+}
+
+.header {
+    .menu {
+        .social {
+            &__list {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+            }
+        }
+    }
+}

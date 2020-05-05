@@ -1,0 +1,269 @@
+.solutions {
+    background: linear-gradient(180deg, rgba(0, 71, 255, 0) 0%, #0047FF 100%);
+
+    &__body {
+        position: relative;
+
+        margin-top: 100px;
+        padding: 0 100px;
+    }
+
+    &__container {
+        position: relative;
+
+        display: flex;
+        
+        @media (max-width: 1280px) {
+            position: relative;
+
+            flex-direction: column;
+        }
+
+        h3 {
+            margin-bottom: 10px;
+            
+            font-family: 'Gotham Pro';
+            font-size: 1.5rem;
+            line-height: 2.5rem;
+            color: #fff;
+
+            @media (max-width: 767.9px) {
+                font-size: 0.875rem;
+                line-height: 1.25rem;
+            }
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 180%;
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 560px;
+            @media (max-width: 767.9px) {
+                font-size: 0.75rem;
+                line-height: 1.125rem;
+            }
+        }
+    }
+
+    &__left {
+        flex: 1 1 100%;
+        text-align: right;
+        padding-top: 175px;
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+
+        @media (max-width: 1280px) {
+            position: static;
+            padding-top: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            &>.solutions__solution {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+        }
+        
+    }
+
+    &__right {
+        flex: 1 1 100%;
+        text-align: left;
+        padding-top: 35px;
+        position: relative;
+
+        @media (max-width: 1280px) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding-top: 0;
+            &>.solutions__solution {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+        }
+    }
+
+    &__center {
+        width: 220px;
+        margin: 0 80px;
+
+        @media (max-width: 1280px) {
+            display: none;
+        }
+    }
+
+    &__solution {
+        position: absolute;
+
+        @media (max-width: 1280px) {
+            position: initial;
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+
+        @media (max-width: 767.9px) {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+
+        &--broker {
+            top: 450px;
+        }
+
+        &--custom{
+            top: 315px;
+        }
+
+        &--trading {
+            top: 585px;
+        }
+
+        &--btn {
+            position: absolute;
+            bottom: 100px;
+
+            &:focus path,
+            &:hover path {
+                fill: #fff;
+            }
+
+            .btn-about {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-sizing: border-box;
+                width: 272px;
+                height: 60px;
+
+                font-size: 1rem;
+                line-height: 180%;
+
+                @media (max-width: 768px) {
+                    width: 208px;
+                    height: 42px;
+
+                    font-size: 0.75rem;
+                    line-height: 1.125rem;
+                }
+            }
+
+            @media (max-width: 1280px) {
+                position: absolute;
+                bottom: -100px;
+            }
+        }
+
+        &>.solutions-pill__circle {
+            display: none;
+
+            @media (max-width: 1280px) {
+                display: flex;
+            }
+
+            @media (max-width: 767.9px) {
+                display: flex;
+                width: 60px;
+                height: 60px;
+                justify-content: center;
+                align-content: center;
+                align-items: center;
+
+                &>img {
+                    display: block;
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .solutions {
+        &__container {
+            padding-bottom: 170px;
+        }
+        &__body {
+            margin-top: 10px;
+            padding: 0 15px;
+        }
+
+        &__left,
+        &__right {
+            .solutions__solution .solutions-pill__circle {
+                background-size: 24px 24px;
+            }
+        }
+
+        &__left {
+            .solutions__solution:nth-of-type(1) .solutions-pill__circle {
+                background-color: $color-blue;
+                border: none;
+                box-shadow: 0 0 1px 10px rgba(0, 71, 255, 0.2);
+            }
+        }
+
+        &__right {
+            .solutions__solution:nth-of-type(2) .solutions-pill__circle {
+                background-color: $color-blue;
+                border: none;
+                box-shadow: 0 0 1px 10px rgba(0, 71, 255, 0.2);
+            }
+        }
+
+        &__solution--btn {
+            bottom: 100px;
+        }
+    }
+}
+
+@media (max-width: 1280px) {
+    .solutions {
+
+
+        &__left {
+            .solutions__solution:nth-of-type(1) p {
+                padding-right: 15px;
+            }
+
+            .solutions__solution:nth-of-type(1) .solutions-pill__circle {
+                background-image: url('../assets/img/headphones.svg');
+                background-position: 50% 50%;
+                background-repeat: no-repeat;
+            }
+
+            .solutions__solution:nth-of-type(2) .solutions-pill__circle {
+                background-image: url('../assets/img/gear.svg');
+                background-position: 50% 50%;
+                background-repeat: no-repeat;
+            }
+        }
+
+        &__right {
+            .solutions__solution:nth-of-type(1) .solutions-pill__circle {
+                background-image: url('../assets/img/key.svg');
+                background-position: 50% 50%;
+                background-repeat: no-repeat;
+            }
+
+            .solutions__solution:nth-of-type(2) .solutions-pill__circle {
+                background-image: url('../assets/img/web-programming.svg');
+                background-position: 50% 50%;
+                background-repeat: no-repeat;
+            }
+
+            .solutions__solution:nth-of-type(3) .solutions-pill__circle {
+                background-image: url('../assets/img/sliders.svg');
+                background-position: 50% 50%;
+                background-repeat: no-repeat;
+            }
+        }
+    }
+}

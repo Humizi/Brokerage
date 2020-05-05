@@ -1,0 +1,119 @@
+.request {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &--off {
+        display: none;
+    }
+    &__wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        max-width: 540px;
+        margin: 0 auto;
+        margin-bottom: 50px;
+        padding: 40px 75px 39px 75px;
+
+        text-align: center;
+
+        border: 1px solid rgba($color: #fff, $alpha: 0.1);
+        border-radius: 40px;
+    }
+
+    &__body {
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 380px;
+        padding-top: 90px;
+
+        &::before {
+            content: '';
+
+            position: absolute;
+            top: 0;
+            left: calc(50% - 60px/2);
+
+            width: 60px;
+            height: 60px;
+
+            background-image: url('../assets/img/ok.svg');
+            background-position: 0 0;
+            background-repeat: no-repeat;
+        }
+    }
+
+    &__title {
+        margin-bottom: 10px;
+
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: 180%;
+
+        opacity: 0.8;
+    }
+}
+
+.popup {
+    .request {
+        &__wrap {
+            padding: 5vh 5vw;
+            margin-bottom: 5vh;
+
+            border: 1px solid rgba($color: #000, $alpha: 0.1);
+        }
+
+        &__body {
+            &::before {
+                background-image: url('../assets/img/ok-black.svg');
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .request {
+        &__wrap {
+            margin-bottom: 0;
+            padding: 40px;
+
+            border: none;
+        }
+
+        &__body {
+            max-width: 240px;
+            padding-top: 60px;
+
+            &::before {
+                left: calc(50% - 40px/2);
+
+                width: 40px;
+                height: 40px;
+
+                background-size: 40px 40px;
+            }
+        }
+
+        &__title {
+            font-size: 0.85rem;
+            line-height: 1.25rem;
+        }
+
+        &__text {
+            font-size: 0.75rem;
+            line-height: 1.125rem;
+            text-align: center;
+        }
+    }
+}
